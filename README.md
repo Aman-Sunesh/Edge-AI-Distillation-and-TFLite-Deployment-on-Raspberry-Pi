@@ -85,20 +85,6 @@ The final Raspberry Pi inference benchmark showed that INT8 quantization substan
 
 The FP16 model took approximately **0.074–0.077 seconds per image**, while the INT8 model took approximately **0.0074–0.0079 seconds per image**. Both models produced the same predicted classes across all 10 sample images.
 
-Place the final inference screenshot here:
-
-```text
-screenshots/inference_summary.png
-```
-
-Then display it with:
-
-```markdown
-![Raspberry Pi inference summary](screenshots/inference_summary.png)
-```
-
-Preview:
-
 ![Raspberry Pi inference summary](screenshots/inference_summary.png)
 
 ---
@@ -127,38 +113,3 @@ TensorFlow Lite quantization made the student model more practical for edge depl
 - psutil
 
 ---
-
-## Repository Structure
-
-```text
-.
-├── edge_ai_distillation_tflite_raspberry_pi.ipynb
-├── Inference.py
-├── README.md
-├── models/
-│   ├── teacher_model.keras
-│   ├── student_model.h5
-│   ├── student_model_float16_weights_only.tflite
-│   └── student_model_int8_weights_only_cifar.tflite
-├── screenshots/
-│   └── inference_summary.png
-└── images/
-    ├── image1_frog.jpg
-    ├── image2_automobile.jpg
-    ├── image3_truck.jpg
-    ├── image4_airplane.jpg
-    ├── image5_ship.jpg
-    ├── image6_deer.jpg
-    ├── image7_dog.jpg
-    ├── image8_horse.jpg
-    ├── image9_bird.jpg
-    └── image10_cat.jpg
-```
-
----
-
-## Notes
-
-The notebook contains the full training, distillation, quantization, and deployment workflow. The Raspberry Pi inference script is separated as `Inference.py` so it can be copied directly to the device and run from the command line.
-
-If this project originated from a course lab, make the repository public only if course policy allows publishing completed lab solutions.
